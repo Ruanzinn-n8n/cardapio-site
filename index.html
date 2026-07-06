@@ -1,12 +1,437 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lanchonete Vitória</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lanchonete Vitória — Cardápio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="./styles/output.css">
+<link rel="stylesheet" href="./styles/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Fraunces:ital,wght@1,500&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    
-    
+
+  <!-- TOPBAR -->
+  <header class="topbar" id="topbar">
+    <div class="logo-mark">L</div>
+    <div class="topbar-name">Lanchonete Vitória</div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1400&q=80&auto=format&fit=crop" alt="Hambúrguer artesanal Braza">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Hamburgueria artesanal</div>
+      <h1 class="hero-title">Lanchonete Vitória</h1>
+      <p class="hero-slogan">"Sabor que conquista."</p>
+      <div class="hero-divider"></div>
+      <p class="hero-desc">Hambúrgueres artesanais feitos na hora, com ingredientes selecionados todos os dias e blend de carne moído na casa.</p>
+    </div>
+  </section>
+
+  <!-- CATEGORY NAV -->
+  <div class="catnav-wrap">
+    <nav class="catnav" id="catnav">
+      <button class="cat-pill active" data-target="artesanais">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M5 12a7 7 0 0114 0M3 15h18a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+        Artesanais
+      </button>
+      <button class="cat-pill" data-target="classicos">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 15c0-4 3-7 8-7s8 3 8 7" />
+          <path d="M3 15h18l-1.5 3.5a2 2 0 01-1.8 1.5H6.3a2 2 0 01-1.8-1.5L3 15z" />
+          <path d="M12 8V5" />
+        </svg>
+        Clássicos
+      </button>
+      <button class="cat-pill" data-target="pizza">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M3 11h18M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg>
+        Pizza
+      </button>
+      <button class="cat-pill" data-target="porcoes">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11h14l-1.2 7.2a2 2 0 01-2 1.8H8.2a2 2 0 01-2-1.8L5 11z"/><path d="M9 11V7a3 3 0 016 0v4"/></svg>
+        Porções
+      </button>
+      <button class="cat-pill" data-target="bebidas">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7 3h10l-1 15a2 2 0 01-2 2h-4a2 2 0 01-2-2L7 3z" />
+          <path d="M6.5 8h11" />
+        </svg>
+        Bebidas
+      </button>
+
+    </nav>
+  </div>
+
+  <!-- MENU -->
+  <main class="menu">
+
+    <!-- ARTESANAIS -->
+    <section class="category-section" id="artesanais">
+      <div class="section-heading">
+        <div class="section-bar"></div>
+        <h2 class="section-title">Hambúrgueres Artesanais</h2>
+      </div>
+      <p class="section-sub">Blend próprio, grelhados na hora</p>
+      <div class="product-grid">
+
+        <article class="card">
+            <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=800&q=80&auto=format&fit=crop" alt="X-Salada">
+          </div>
+          <div class="card-body">
+            <div class="card-top"><span class="card-name">X-Salada</span></div>
+            <p class="card-desc">Blend 120g, Alface, Tomate e Mussarela.</p>
+            <p class="card-ingredients">Pão · Hambúrguer · Molho Especial</p>
+            <div class="card-divider"></div>
+            <div class="card-footer"><span class="card-price"><small>R$</small>18,00</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1586816001966-79b736744398?w=800&q=80&auto=format&fit=crop" alt="Duplo Salada">
+          </div>
+          <div class="card-body">
+            <div class="card-top"><span class="card-name">Duplo Salada</span></div>
+            <p class="card-desc">Dois Blends 120g grelhado na hora, Alface, Tomate e Mussarela no pão brioche.</p>
+            <p class="card-ingredients">2x Blends · Alface · Tomate</p>
+            <div class="card-divider"></div>
+            <div class="card-footer"><span class="card-price"><small>R$</small>24,00</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media">
+             <img src="https://familiarrecipes.com/wp-content/uploads/2025/06/Garlic-butter-bacon-burgers-stacked-with-bacon-and-cheese.jpg" alt="Bacon Especial">
+          </div>
+          <div class="card-body">
+            <div class="card-top"><span class="card-name">Bacon Especial</span></div>
+            <p class="card-desc">Blend 120g, Bacon, Cheddar, Alface, Tomate e Mussarela.</p>
+            <p class="card-ingredients">Bacon · Cheddar · Alface</p>
+            <div class="card-divider"></div>
+            <div class="card-footer"><span class="card-price"><small>R$</small>23,00</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1607013251379-e6eecfffe234?w=800&q=80&auto=format&fit=crop" alt="Duplo Bacon Especial">
+            <span class="badge">Mais Pedido</span>
+          </div>
+          <div class="card-body">
+            <div class="card-top"><span class="card-name">Duplo Bacon Especial</span></div>
+            <p class="card-desc">Dois Blends 120g coberto com Bacon, Cheddar, Alface, Tomate e Mussarela.</p>
+            <p class="card-ingredients">2x Blends · Alface · Bacon · Molho especial</p>
+            <div class="card-divider"></div>
+            <div class="card-footer"><span class="card-price"><small>R$</small>27,00</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1610614819513-58e34989848b?w=800&q=80&auto=format&fit=crop" alt="Cheese Burguer">
+          </div>
+          <div class="card-body">
+            <div class="card-top"><span class="card-name">Cheese Burguer</span></div>
+            <p class="card-desc">Blend de 120g, Queijo Cremoso e Mussarela.</p>
+            <p class="card-ingredients">Cheddar · Queijo Cremoso · Blend</p>
+            <div class="card-divider"></div>
+            <div class="card-footer"><span class="card-price"><small>R$</small>21,00</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1520072959219-c595dc870360?w=800&q=80&auto=format&fit=crop" alt="Filé Mignon">
+            <span class="badge">Especial</span>
+          </div>
+          <div class="card-body">
+            <div class="card-top"><span class="card-name">Filé Mignon</span></div>
+            <p class="card-desc">Blend de Filé Mignon 140g, Bacon e Mussarela.</p>
+            <p class="card-ingredients">Bacon · Filé Mignon</p>
+            <div class="card-divider"></div>
+            <div class="card-footer"><span class="card-price"><small>R$</small>32,90</span></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CLÁSSICOS -->
+    <section class="category-section" id="classicos">
+      <div class="section-heading">
+        <div class="section-bar"></div>
+        <h2 class="section-title">Clássicos</h2>
+      </div>
+      <p class="section-sub">Algo mais simples...</p>
+      <div class="product-grid">
+
+        <article class="card">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1634598603968-777d4995e695?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Misto Quente">
+            <span class="badge">Rápido</span>
+          </div>
+          <div class="card-body">
+            <div class="card-top"><span class="card-name">Misto Quente</span></div>
+            <p class="card-desc">Aquele misto clássico, para uma pequena fome</p>
+            <p class="card-ingredients">Pão · Presunto · Queijo</p>
+            <div class="card-divider"></div>
+            <div class="card-footer"><span class="card-price"><small>R$</small>09,00</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media">
+            <img src="https://plus.unsplash.com/premium_photo-1695758787733-b5c0b47af74a?q=80&w=1937&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="X-Frango">
+          </div>
+          <div class="card-body">
+            <div class="card-top"><span class="card-name">X-Frango</span></div>
+            <p class="card-desc">Pão, Filé de Frango, Queijo, Alface e Tomate.</p>
+            <p class="card-ingredients">Alface · Filé de Frango</p>
+            <div class="card-divider"></div>
+            <div class="card-footer"><span class="card-price"><small>R$</small>18,00</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1550317138-10000687a72b?q=80&w=1220&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="X-Egg Bacon">
+          </div>
+          <div class="card-body">
+            <div class="card-top"><span class="card-name">X-Egg Bacon</span></div>
+            <p class="card-desc">Pão, Hambúrguer, Presunto, Queijo, Ovo, Bacon, Alface e Tomate.</p>
+            <p class="card-ingredients">Hambúrguer · Bacon · Ovo</p>
+            <div class="card-divider"></div>
+            <div class="card-footer"><span class="card-price"><small>R$</small>24,90</span></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- PIZZA -->
+    <section class="category-section" id="pizza">
+      <div class="section-heading">
+        <div class="section-bar"></div>
+        <h2 class="section-title">Pizzas</h2>
+      </div>
+      <p class="section-sub">Quem não gosta né?</p>
+      <div class="product-grid">
+
+        <article class="card">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Frango com Catupiry">
+          </div>
+          <div class="card-body">
+            <div class="card-top"><span class="card-name">Frango com Catupiry</span></div>
+            <p class="card-desc">Uma pizza de Frango com o melhor Catupiry da cidade.</p>
+            <p class="card-ingredients">Orégano · Milho · Azeitona</p>
+            <div class="card-divider"></div>
+            <div class="card-footer"><span class="card-price"><small>R$</small>60,00</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1655689823464-17db326b023e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Carne Seca">
+          </div>
+          <div class="card-body">
+            <div class="card-top"><span class="card-name">Carne Seca</span></div>
+            <p class="card-desc">Uma pizza de Carne Seca com bastante Cheddar.</p>
+            <p class="card-ingredients">Mussarela · Tomate Seco · Carne</p>
+            <div class="card-divider"></div>
+            <div class="card-footer"><span class="card-price"><small>R$</small>70,00</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1558138838-6d6290c056c4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Brasileira">
+            <span class="badge">Mais pedida</span>
+          </div>
+          <div class="card-body">
+            <div class="card-top"><span class="card-name">Brasileira</span></div>
+            <p class="card-desc">Sabor Brasileiro com toque de Ervilha, Presunto e Mussarela</p>
+            <p class="card-ingredients">Milho · Cebola · Azeitona</p>
+            <div class="card-divider"></div>
+            <div class="card-footer"><span class="card-price"><small>R$</small>89,90</span></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- PORCOES -->
+    <section class="category-section" id="porcoes">
+      <div class="section-heading">
+        <div class="section-bar"></div>
+        <h2 class="section-title">Porções</h2>
+      </div>
+      <p class="section-sub">Para compartilhar</p>
+      <div class="product-grid">
+
+        <article class="card">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=800&q=80&auto=format&fit=crop" alt="Batata Rústica">
+          </div>
+          <div class="card-body">
+            <div class="card-top"><span class="card-name">Batata Rústica com Alecrim</span></div>
+            <p class="card-desc">Batatas rústicas assadas com casca, alecrim fresco e flor de sal.</p>
+            <p class="card-ingredients">Batata · Alecrim · Flor de sal</p>
+            <div class="card-divider"></div>
+            <div class="card-footer"><span class="card-price"><small>R$</small>24,90</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1639024471283-03518883512d?w=800&q=80&auto=format&fit=crop" alt="Onion Rings">
+          </div>
+          <div class="card-body">
+            <div class="card-top"><span class="card-name">Onion Rings Crocante</span></div>
+            <p class="card-desc">Anéis de cebola empanados na hora, fritos até ficarem crocantes.</p>
+            <p class="card-ingredients">Cebola · Empanado da casa</p>
+            <div class="card-divider"></div>
+            <div class="card-footer"><span class="card-price"><small>R$</small>26,90</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=800&q=80&auto=format&fit=crop" alt="Costela Desfiada">
+          </div>
+          <div class="card-body">
+            <div class="card-top"><span class="card-name">Costela Desfiada com Cheddar</span></div>
+            <p class="card-desc">Costela desfiada lentamente, coberta com cheddar derretido.</p>
+            <p class="card-ingredients">Costela · Cheddar cremoso</p>
+            <div class="card-divider"></div>
+            <div class="card-footer"><span class="card-price"><small>R$</small>38,90</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?w=800&q=80&auto=format&fit=crop" alt="Nachos da Casa">
+          </div>
+          <div class="card-body">
+            <div class="card-top"><span class="card-name">Nachos da Casa</span></div>
+            <p class="card-desc">Nachos crocantes, queijo derretido, guacamole e pico de gallo.</p>
+            <p class="card-ingredients">Nachos · Queijo · Guacamole · Pico de gallo</p>
+            <div class="card-divider"></div>
+            <div class="card-footer"><span class="card-price"><small>R$</small>32,90</span></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- BEBIDAS -->
+    <section class="category-section" id="bebidas">
+      <div class="section-heading">
+        <div class="section-bar"></div>
+        <h2 class="section-title">Bebidas</h2>
+      </div>
+      <p class="section-sub">Geladas na medida certa</p>
+      <div class="product-grid">
+
+        <article class="card">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=800&q=80&auto=format&fit=crop" alt="Refrigerante Lata">
+          </div>
+          <div class="card-body">
+            <div class="card-top"><span class="card-name">Refrigerante Lata</span></div>
+            <p class="card-desc">Sabores variados, sempre geladas.</p>
+            <p class="card-ingredients">350ml</p>
+            <div class="card-divider"></div>
+            <div class="card-footer"><span class="card-price"><small>R$</small>7,90</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=800&q=80&auto=format&fit=crop" alt="Suco Natural">
+          </div>
+          <div class="card-body">
+            <div class="card-top"><span class="card-name">Suco Natural da Fruta</span></div>
+            <p class="card-desc">Feito na hora, com açúcar opcional.</p>
+            <p class="card-ingredients">400ml</p>
+            <div class="card-divider"></div>
+            <div class="card-footer"><span class="card-price"><small>R$</small>12,90</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1507120366498-4656eaece7fa?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Suco ao Leite">
+            <span class="badge">Favorito</span>
+          </div>
+          <div class="card-body">
+            <div class="card-top"><span class="card-name">Suco ao Leite</span></div>
+            <p class="card-desc">Cremoso, para completar sua refeição</p>
+            <p class="card-ingredients">Cacau · Goiaba · Morango</p>
+            <div class="card-divider"></div>
+            <div class="card-footer"><span class="card-price"><small>R$</small>19,90</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1523362628745-0c100150b504?w=800&q=80&auto=format&fit=crop" alt="Água com Gás">
+          </div>
+          <div class="card-body">
+            <div class="card-top"><span class="card-name">Água com Gás</span></div>
+            <p class="card-desc">Gelada, com limão a pedido.</p>
+            <p class="card-ingredients">500ml</p>
+            <div class="card-divider"></div>
+            <div class="card-footer"><span class="card-price"><small>R$</small>6,90</span></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-goldline"></div>
+    <div class="footer-logo">Lanchonete Vitória</div>
+    <div class="footer-tag">Feito com fogo, tempo e carinho.</div>
+    <div class="footer-meta">Aberto todos os dias · 18h às 23h</div>
+  </footer>
+
+<script>
+  const topbar = document.getElementById('topbar');
+  window.addEventListener('scroll', () => {
+    topbar.classList.toggle('scrolled', window.scrollY > 10);
+  });
+
+  const pills = document.querySelectorAll('.cat-pill');
+  const sections = document.querySelectorAll('.category-section');
+
+  pills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      const target = document.getElementById(pill.dataset.target);
+      pills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      target.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        const id = entry.target.id;
+        pills.forEach(p => p.classList.toggle('active', p.dataset.target === id));
+      }
+    });
+  }, {rootMargin:'-160px 0px -70% 0px', threshold:0});
+
+  sections.forEach(sec => observer.observe(sec));
+</script>
+
 </body>
 </html>

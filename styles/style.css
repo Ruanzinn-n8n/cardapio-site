@@ -367,7 +367,9 @@ img {
 .card-desc {
     font-size: 13.5px;
     color: var(--text-secondary);
+    margin: auto;
     margin-bottom: var(--space-sm);
+    width: 100%;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;

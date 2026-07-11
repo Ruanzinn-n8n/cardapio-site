@@ -7,9 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="./styles/output.css">
 <link rel="stylesheet" href="./styles/style.css">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Fraunces:ital,wght@1,500&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Fraunces:ital,wght@1,500&display=swap">
 </head>
+
 <body>
 
   <!-- TOPBAR -->
@@ -69,6 +69,24 @@
     </nav>
   </div>
 
+  <!-- ITEM DETALHE -->
+  <div class="item-det">
+    <div class="item-func">
+      <span>Mais detalhes</span>
+      <button class="fechar">X</button>
+      <div class="modal-media">
+        <img id="modal-img">
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-name"></h2>
+        <p id="modal-desc"></p>
+        <p id="modal-ingredients"></p>
+        <div class="card-divider"></div>
+        <div class="modal-footer"><span class="modal-preco"><small>R$</small><p id="modal-price"></p></span></div>
+      </div>
+    </div>
+  </div>
+
   <!-- MENU -->
   <main class="menu">
 
@@ -81,20 +99,30 @@
       <p class="section-sub">Blend próprio, grelhados na hora.</p>
       <div class="product-grid">
 
-        <article class="card">
+        <article class="card"
+          data-name="X-Salada"
+          data-price="18,00"
+          data-desc="O melhor Hambúrguer artesanal para quem ama aquela saladinha... Vem sem medo!"
+          data-ingredients="Blend 120g · Molho Especial · Mussarela · Pão · Tomate · Alface"
+          data-img="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=800&q=80&auto=format&fit=crop">
             <div class="card-media">
             <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=800&q=80&auto=format&fit=crop" alt="X-Salada">
           </div>
           <div class="card-body">
             <div class="card-top"><span class="card-name">X-Salada</span></div>
             <p class="card-desc">Blend 120g, Molho Especial e Mussarela.</p>
-            <p class="card-ingredients">Pão · Tomate · Alface </p>
+            <p class="card-ingredients">Pão · Tomate · Alface</p>
             <div class="card-divider"></div>
             <div class="card-footer"><span class="card-price"><small>R$</small>18,00</span></div>
           </div>
         </article>
 
-        <article class="card">
+        <article class="card"
+          data-name="X-Salada"
+          data-price="18,00"
+          data-desc="Blend 120g, Molho Especial e Mussarela"
+          data-igredients="Pão · Tomate · Alface"
+          data-img="">
           <div class="card-media">
             <img src="https://images.unsplash.com/photo-1586816001966-79b736744398?w=800&q=80&auto=format&fit=crop" alt="Duplo Salada">
           </div>
@@ -855,35 +883,7 @@
     <div class="footer-meta">Aberto todos os dias · 18h às 23h</div>
   </footer>
 
-<script>
-  const topbar = document.getElementById('topbar');
-  window.addEventListener('scroll', () => {
-    topbar.classList.toggle('scrolled', window.scrollY > 10);
-  });
-
-  const pills = document.querySelectorAll('.cat-pill');
-  const sections = document.querySelectorAll('.category-section');
-
-  pills.forEach(pill => {
-    pill.addEventListener('click', () => {
-      const target = document.getElementById(pill.dataset.target);
-      pills.forEach(p => p.classList.remove('active'));
-      pill.classList.add('active');
-      target.scrollIntoView({behavior:'smooth', block:'start'});
-    });
-  });
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        const id = entry.target.id;
-        pills.forEach(p => p.classList.toggle('active', p.dataset.target === id));
-      }
-    });
-  }, {rootMargin:'-160px 0px -70% 0px', threshold:0});
-
-  sections.forEach(sec => observer.observe(sec));
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>

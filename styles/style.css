@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
     --primary: #F5A623;
     --secondary: #FFB84D;

@@ -631,5 +631,7 @@ img {
 }
 
 @media (max-width: 380) {
+    .topbar-zap {
     font-size: 10px;
+    }
 }

@@ -630,8 +630,12 @@ img {
     }
 }
 
-@media (max-width: 380) {
-    .topbar-zap {
+@media (max-width: 450px) {
+    .topbar-number {
     font-size: 10px;
+    }
+    .topbar-icon {
+        height: 10px;
+        width: 10px;
     }
 }

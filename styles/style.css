@@ -96,20 +96,24 @@ img {
 
 .topbar-zap {
     margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .topbar-icon {
-    position: relative;
-    height: 30px;
     width: 30px;
-    right: 5%;
-    top: 12px;
+    height: 30px;
+}
+
+.topbar-icon img {
+    width: 100%;
+    height: 100%;
 }
 
 .topbar-number {
-    position: relative;
-    right: -20%;
-    top: -14px;
+    font-size: 15px;
+    color: var(--text-secondary);
 }
 
 /* ===== HERO ===== */
@@ -630,18 +634,34 @@ img {
     }
 }
 
-@media (max-width: 500px) {
-    .topbar-number {
-    font-size: 10px;
-    top: 11px;
-    left: -235px;
+@media (max-width: 768px) {
 
+    .topbar {
+        gap: 12px;
+    }
+
+    .topbar-name {
+        font-size: 15px;
+    }
+
+    .topbar-zap {
+        margin-left: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
+        position: absolute;
+        left: 104px;
+        top: 58px;
+    }
+
+    .topbar-number {
+        font-size: 10px;
     }
 
     .topbar-icon {
-        height: 15px;
-        width: 15px;
-        top: 26px;
-        left: -250px;
+        width: 14px;
+        height: 14px;
     }
+
 }

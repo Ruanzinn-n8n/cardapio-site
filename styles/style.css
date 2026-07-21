@@ -633,10 +633,11 @@ img {
 @media (max-width: 500px) {
     .topbar-number {
     font-size: 10px;
+    top: -8px;
     }
     .topbar-icon {
-        height: 20px;
-        width: 20px;
-        top: 3px;
+        height: 25px;
+        width: 25px;
+        top: 11px;
     }
 }

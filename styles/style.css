@@ -94,16 +94,22 @@ img {
     letter-spacing: -0.01em;
 }
 
+.topbar-zap {
+    margin-left: auto;
+}
+
 .topbar-icon {
     position: relative;
     height: 30px;
     width: 30px;
-    right: -65%;
+    right: 5%;
+    top: 12px;
 }
 
 .topbar-number {
     position: relative;
-    right: -65%;
+    right: -20%;
+    top: -14px;
 }
 
 /* ===== HERO ===== */
